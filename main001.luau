@@ -114,7 +114,7 @@ TDX_AutoStrat.useRecorder = function(stratName, author)
                     table.insert(StrategySteps, args)
                 end)
         else
-            event.OnServerEvent:Connect(function(_player, args)
+            event.OnClientEvent:Connect(function(_player, args)
                 table.insert(StrategySteps, args)
             end)
         end
