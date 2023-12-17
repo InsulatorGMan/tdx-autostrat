@@ -109,10 +109,9 @@ TDX_AutoStrat.useRecorder = function(stratName, author)
     for i, event in pairs(EventsToWatch) do
 
         if event:IsA('RemoteFunction') then
-            event.OnServerInvoke:Connect(
-                function(_player, args)
-                    table.insert(StrategySteps, args)
-                end)
+            event.OnServerInvoke = function(_player, args)
+                table.insert(StrategySteps, args)
+            end
         else
             event.OnClientEvent:Connect(function(_player, args)
                 table.insert(StrategySteps, args)
