@@ -103,7 +103,7 @@ TDX_AutoStrat.useRecorder = function(stratName, author)
         TDX_AutoStrat.RemotesFolder["SkipWaveVoteCast"]
     }
 
-    local RecordedStrategyFileName = stratName + '_' + author + '.json'
+    local RecordedStrategyFileName = stratName..'_'..author..'.json'
     local StrategySteps = {}
 
     for i, event in pairs(EventsToWatch) do
